@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    // url = window.location.search
+    function getParameterByName(name, url = '?id=990103') {
+      var regex = new RegExp('(\\?' + name + '=)([0-9]{6})'),
+          results = regex.exec(url);
+      if (!results) return null;
+      if (!results[2]) return '';
+      debugger;
+      return results[2];
+    }
+
+    console.log(getParameterByName('id'));
+  </script>
+</body>
+</html>
